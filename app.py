@@ -44,7 +44,7 @@ from PIL import Image
 if st.button('submit'):
     with st.spinner('Generating the post...'):
         if user_input != "":
-            image = cc.getImage(user_input)
+            image = cc.getImage2(user_input)
             final = pg.postGen(user_input)
             st.markdown(
                 f"""
