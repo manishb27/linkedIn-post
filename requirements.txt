@@ -1,4 +1,4 @@
 openai 
 replicate
 streamlit
-urllib3
+urllib3==1.25.11
