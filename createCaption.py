@@ -1,13 +1,5 @@
 import replicate
 
-# replicate.run(
-#   "stability-ai/stable-diffusion:27b93a2413e7f36cd83da926f3656280b2931564ff050bf9575f1fdf9bcd7478",
-#   input={"prompt": "a 19th century portrait of a wombat gentleman"}
-# )
-
-
-image = open("testImages/people.webp", "rb")
-
 def get_details(image):
     output = replicate.run(
             "salesforce/blip:2e1dddc8621f72155f24cf2e0adbde548458d3cab9f00c0139eea840d0ac4746",
