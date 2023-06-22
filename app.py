@@ -44,11 +44,13 @@ from PIL import Image
 if st.button('submit'):
     with st.spinner('Generating the post...'):
         if user_input != "":
-            image = cc.getImage2(user_input)
+
+            image_prompt = pg.image_prompt_gen(user_input)
             final = pg.postGen(user_input)
+            image = cc.getImage2(image_prompt)
             st.markdown(
                 f"""
-                <div class="container">
+                <div class="container">p
                     <h2>LinkedIn Post</h2>
                     <img src="{image}" alt="Image Description" width="200" style="display: block; margin: 0 auto;">
                     <p>{final}</p>
