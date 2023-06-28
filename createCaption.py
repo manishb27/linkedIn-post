@@ -26,7 +26,7 @@ def getImage2(prompt):
 if __name__ == "__main__":
     # print(get_details(image)) 
     # output = getImage("a 19th century portrait of a wombat gentleman")
-    # output = getImage("Automated museum entrance - effortless exploration.")
-    output = getImage2('a 19th century portrait of a wombat gentleman')
+    output = getImage("Automated museum entrance - effortless exploration.")
+    # output = getImage2('a 19th century portrait of a wombat gentleman')
     print(output)
 

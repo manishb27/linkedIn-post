@@ -2,7 +2,6 @@ import streamlit as st
 import postGen as pg
 import createCaption as cc
 from PIL import Image
-
 # clear text on refresh
 def clear_text():
     st.session_state["user_input"] = ""
@@ -29,7 +28,7 @@ def write_container_styles():
 write_container_styles()
 
 # importing the logo
-logo = Image.open('Dynpro.png')
+logo = Image.open('logo.png')
 
 # adding the logo
 col1, col2, col3 = st.columns(3)
@@ -37,10 +36,10 @@ col2.image(logo)
 
 # Title of the App
 main = st.container()
-main.title("LinkedIn post generator")
+main.title("LinkedIn post generator from image")
 
 
-main.write('''This app a LinkedIn post using the power of GPT-3.''')
+main.write('''This app a LinkedIn post from an image using the power of GPT-3.''')
 
 user_input = st.text_input('Details', placeholder=' Please provide some details for the post', key = 'user_input')
 # image_input = st.text_input('Please provide the image url', placeholder='Image url', key = 'image_input')
@@ -60,7 +59,8 @@ if st.button('submit'):
                 f"""
                 <div class="container">
                     <h2>LinkedIn Post</h2>
-                    <img src="{image}" alt="Image Description" width="200" style="display: block; margin: 0 auto;">
+                    <img src="{image}" alt="Image Description" width="400" style="display: block; margin: 0 auto;">
+                    <br> 
                     <p>{final}</p>
                 </div>
                 """,
