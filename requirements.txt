@@ -1,4 +1,6 @@
 openai 
 replicate
 streamlit
+
+# remember to change the ulib version for local as it is not compatible with streamlit
 urllib3==1.25.11

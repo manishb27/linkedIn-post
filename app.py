@@ -32,11 +32,11 @@ logo = Image.open('logo.png')
 
 # adding the logo
 col1, col2, col3 = st.columns(3)
-col2.image(logo)
+col2.image(logo, width=150)
 
 # Title of the App
 main = st.container()
-main.title("LinkedIn post generator from image")
+main.title("LinkedIn post generator from information")
 
 
 main.write('''This app a LinkedIn post from an image using the power of GPT-3.''')
